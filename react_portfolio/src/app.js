@@ -1,8 +1,16 @@
 import React from "react";
-import HelloDiv from "./components/HelloDiv";
+import Button from "./components/ButtonStyled/index";
+import NavBar from "./components/NavBar/index";
 
 function App() {
-  return <HelloDiv />;
+  return (
+    <main>
+      <NavBar></NavBar>
+      <Button.ButtonPrimary text="Hello" ></Button.ButtonPrimary>
+      <Button.ButtonSecondary text="Hello" ></Button.ButtonSecondary>
+    </main>
+
+  )
 }
 
 export default App;
