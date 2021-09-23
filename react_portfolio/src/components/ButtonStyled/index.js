@@ -7,7 +7,7 @@ const baseStyle = {
     paddingTop: '10px',
     paddingBottom: '10px',
     paddingRight: '25px',
-    paddingLeft: '25px'
+    paddingLeft: '25px',
 }
 
 const primaryStyle = {
@@ -36,9 +36,9 @@ function ButtonSecondary (props) {
     )
 }
 
-const btnObj = {
+const BtnObj = {
     ButtonPrimary,
     ButtonSecondary
 }
 
-export default btnObj
+export default BtnObj

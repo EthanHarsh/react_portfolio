@@ -8,3 +8,5 @@ exports.background = 'white'
 exports.secondary = '#CE103C'
 exports.secondaryBorder = '1px solid #CE103C'
 exports.secondaryBorderLight = '1px solid #e2708a'
+
+exports.lightAccent = '#e5e5e5'

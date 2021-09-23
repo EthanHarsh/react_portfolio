@@ -1,20 +1,23 @@
 import React from "react";
-import InfoBox from "./components/InfoBox";
 import NavBar from "./components/NavBar/index";
+import HomePage from "./pages/home"
 
 
-
+const mainStyle = {
+  position: 'absolute',
+  left: '0px',
+  top: '0px',
+  width: '100vw',
+  height: '100vh'
+}
 
 function App() {
 
   return (
-    <main>
+    <main style={mainStyle}>
       <NavBar></NavBar>
-      <InfoBox.RegBox></InfoBox.RegBox>
-      <InfoBox.BlueBox></InfoBox.BlueBox>
-      <InfoBox.BlueBoxOutline></InfoBox.BlueBoxOutline>
-      <InfoBox.RedBox></InfoBox.RedBox>
-      <InfoBox.RedBoxOutline></InfoBox.RedBoxOutline>      
+          
+      <HomePage></HomePage>
     </main>
   )
 }

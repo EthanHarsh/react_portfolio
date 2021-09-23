@@ -1,6 +1,6 @@
 import React from "react";
-import { Flex, Box, Image } from 'rebass';
-import { background, primary } from "../utils/colors/lightTheme";
+import { Flex, Box, Image, Text } from 'rebass';
+import { primary } from "../utils/colors/lightTheme";
 import { github, linkedin, instagram } from './../utils/icons/socials'
 import { windowPaddingSides } from "../utils/padding_margin/padding";
 
@@ -15,11 +15,6 @@ const style = {
 
 const boxBaseStyle = {
     color: 'black'
-}
-
-const leftBox = {
-    ...boxBaseStyle,
-    color: background
 }
 
 const centerBox = {
@@ -41,14 +36,14 @@ function NavBar (props) {
     return(
         <Flex style={style}>
             <Box width={1/3} style={boxBaseStyle}>
-                <span style={logoText}>Ethan Harsh</span>
+                <Text fontWeight='bold' style={logoText}>Ethan Harsh</Text>
             </Box>
             <Box width={1/3} style={centerBox}>
                 <Flex>
-                    <Box width={1/4}>About Me</Box>
-                    <Box width={1/4}>Portfolio</Box>
-                    <Box width={1/4}>Contact</Box>
-                    <Box width={1/4}>Resume</Box>
+                    <Box width={1/4}><Text fontWeight='bold'>About</Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'>Portfolio</Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'>Contact</Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'>Resume</Text></Box>
                 </Flex>
             </Box>
             <Box width={1/3} style={boxBaseStyle}>

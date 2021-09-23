@@ -1,12 +1,20 @@
 import React from "react";
-import { primaryBorderLight, primary, primaryBorder, secondaryBorderLight, secondary, secondaryBorder } from "../utils/colors/lightTheme";
+import { primaryBorderLight, primary, primaryBorder, secondaryBorderLight, secondary, secondaryBorder, lightAccent, background } from "../utils/colors/lightTheme";
 import { Box } from 'rebass';
 
 
 const baseStyle = {
     width: '100%',
     height: '450px',
-    borderRadius: '20px'
+    borderRadius: '20px',
+    padding: '5rem',
+    marginBottom: '2.5rem',
+    background: background
+}
+
+const featureBoxStyle = {
+    ...baseStyle,
+    height: '375px'
 }
 
 const blueBoxStyle = {
@@ -32,42 +40,62 @@ const redBoxOutlineStyle = {
 
 }
 
-function RegBox() {
+const greyBoxStyle = {
+    ...baseStyle,
+    background: lightAccent,
+    height: 'auto'
+}
+
+function RegBox({ children }) {
     return (
-        <Box width={1/1} style={baseStyle}></Box>
+        <Box width={1/1} style={baseStyle}>{children}</Box>
     )
 }
 
-function BlueBox() {
+function FeatureBox({ children }) {
     return (
-       <Box width={1/1} style={blueBoxStyle}></Box>
+        <Box width={1/1} style={featureBoxStyle}>{children}</Box>
     )
 }
 
-function BlueBoxOutline() {
+function BlueBox({ children }) {
     return (
-       <Box width={1/1} style={blueBoxOutlineStyle}></Box>
+       <Box width={1/1} style={blueBoxStyle}>{children}</Box>
     )
 }
 
-function RedBox() {
+function BlueBoxOutline({ children }) {
     return (
-       <Box width={1/1} style={redBoxStyle}></Box>
+       <Box width={1/1} style={blueBoxOutlineStyle}>{children}</Box>
     )
 }
 
-function RedBoxOutline() {
+function RedBox({ children }) {
     return (
-       <Box width={1/1} style={redBoxOutlineStyle}></Box>
+       <Box width={1/1} style={redBoxStyle}>{children}</Box>
+    )
+}
+
+function RedBoxOutline({ children }) {
+    return (
+       <Box width={1/1} style={redBoxOutlineStyle}>{children}</Box>
+    )
+}
+
+function GreyBox({ children }) {
+    return (
+       <Box width={1/1} style={greyBoxStyle}>{children}</Box>
     )
 }
 
 const InfoBox = {
     RegBox,
+    FeatureBox,
     BlueBox,
     BlueBoxOutline,
     RedBox,
-    RedBoxOutline
+    RedBoxOutline,
+    GreyBox
 }
 
 export default InfoBox;
