@@ -1,15 +1,21 @@
 import React from "react";
-import Button from "./components/ButtonStyled/index";
+import InfoBox from "./components/InfoBox";
 import NavBar from "./components/NavBar/index";
 
+
+
+
 function App() {
+
   return (
     <main>
       <NavBar></NavBar>
-      <Button.ButtonPrimary text="Hello" ></Button.ButtonPrimary>
-      <Button.ButtonSecondary text="Hello" ></Button.ButtonSecondary>
+      <InfoBox.RegBox></InfoBox.RegBox>
+      <InfoBox.BlueBox></InfoBox.BlueBox>
+      <InfoBox.BlueBoxOutline></InfoBox.BlueBoxOutline>
+      <InfoBox.RedBox></InfoBox.RedBox>
+      <InfoBox.RedBoxOutline></InfoBox.RedBoxOutline>      
     </main>
-
   )
 }
 

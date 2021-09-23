@@ -24,12 +24,13 @@ const leftBox = {
 
 const centerBox = {
     ...boxBaseStyle,
-    fontSize: '1.25rem'
+    fontSize: '1.15rem',
+    textAlign: 'center'
 }
 
 const logoText = {
     color: primary,
-    fontSize: '1.5rem'
+    fontSize: '1.35rem'
 }
 
 const logoGroup = {
