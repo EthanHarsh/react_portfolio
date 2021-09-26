@@ -61,7 +61,8 @@ function Portfolio () {
     } 
     //console.log(data.features);
     let projects = data.projects;
-    console.log(projects)
+    projects = projects.reverse();
+    //console.log(projects)
     return (
         <div style={pageStyle}>
             <InfoBox.GreyBox>
