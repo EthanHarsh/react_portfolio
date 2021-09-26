@@ -2,20 +2,20 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Project {
-    _id: ID
+    _id: ID!
     name: String
     type: String
     description: String
-    keywords: [String]
     url: String
     repo: String
     heroimg: String,
     createDate: String
+    featured: String
   }
 
   type Query {
-    projects: [Project]
+    features: [Project]
   }
-`;
+`
 
 module.exports = typeDefs;

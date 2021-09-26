@@ -1,10 +1,15 @@
 import React from "react";
+import { useQuery } from '@apollo/client'
 import { pageMarginBottom, pageMarginTop } from "../components/utils/padding_margin/margin";
 import { windowPaddingSides } from "../components/utils/padding_margin/padding";
 import InfoBox from './../components/InfoBox/index'
+import ProjectDisplay from "../components/InfoBox/projects";
 import { Box, Heading, Text, Image, Flex } from "rebass";
 import { background, primaryText } from "../components/utils/colors/lightTheme";
 import BtnObj from './../components/ButtonStyled/index'
+import { QUERY_FEATURES } from './../utils/queries';
+import Footer from "../components/Footer/index";
+
 
 const pageStyle = {
     marginLeft: windowPaddingSides,
@@ -45,6 +50,19 @@ const featureStyle = {
 }
 
 function HomePage() {
+    const { loading, error, data } = useQuery(QUERY_FEATURES)
+    if (loading) {
+        console.log(loading)
+        console.log(data)
+        return <p>Loading...{loading}</p>;
+    }
+    if (error) {
+        console.log(error)
+        return <p>Error!</p>;
+    } 
+    //console.log(data.features);
+    let features = data.features;
+    //console.log(features[0])
     return (
         <div style={pageStyle}>
             <InfoBox.BlueBox>
@@ -77,14 +95,18 @@ function HomePage() {
             <InfoBox.GreyBox>
                 <Flex style={featureStyle}>                
                     <Text style={ introTextPrimary }>Featured Projects</Text>
-                    <InfoBox.FeatureBox>
+                    <ProjectDisplay project={features[2]}>
 
-                    </InfoBox.FeatureBox>
-                    <InfoBox.FeatureBox>
+                    </ProjectDisplay>
+                    <ProjectDisplay project={features[1]}>
 
-                    </InfoBox.FeatureBox>
+                    </ProjectDisplay>
+                    <ProjectDisplay project={features[0]}>
+
+                    </ProjectDisplay>
                 </Flex>
             </InfoBox.GreyBox>
+            <Footer />
         </div>
     )
 

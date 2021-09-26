@@ -8,6 +8,7 @@ const baseStyle = {
     paddingBottom: '10px',
     paddingRight: '25px',
     paddingLeft: '25px',
+    marginRight: '1rem'
 }
 
 const primaryStyle = {
@@ -21,7 +22,7 @@ const secondaryStyle = {
     ...baseStyle,
     background: secondaryBtn,
     border: secondaryBtnBorder,
-    color: secondaryBtnText
+    color: secondaryBtnText,
 }
 
 function ButtonPrimary (props) {

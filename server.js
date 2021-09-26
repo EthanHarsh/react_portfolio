@@ -16,7 +16,7 @@ mongoose.connect(DB, {
 });
 
 //START SERVER
-const port = process.env.NODE_PORT || 3000;
+const port = 3001;
 app.listen(port, () => {
     console.log(`App running on port ${port}...`);
 });
@@ -24,6 +24,8 @@ app.listen(port, () => {
 startApolloServer(schemas.typeDefs, schemas.resolvers)
 
 async function startApolloServer(typeDefs, resolvers) {
+  console.log(typeDefs)
+  console.log(resolvers)
   const httpServer = http.createServer(app);
   const server = new ApolloServer({
     typeDefs,
@@ -32,6 +34,6 @@ async function startApolloServer(typeDefs, resolvers) {
   });
   await server.start();
   server.applyMiddleware({ app });
-  await new Promise(resolve => httpServer.listen({ port: process.env.GRAPH_PORT }, resolve));
-  console.log(`🚀 Server ready at http://localhost:${process.env.GRAPH_PORT}${server.graphqlPath}`);
+  await new Promise(resolve => httpServer.listen({ port: 4000 }, resolve));
+  console.log(`🚀 Server ready at http://localhost:${4000}${server.graphqlPath}`);
 }

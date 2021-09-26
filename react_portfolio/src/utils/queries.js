@@ -3,15 +3,30 @@ import { gql } from '@apollo/client';
 export const QUERY_PROJECTS = gql`
   query getProjects {
     projects {
-        _id: ID
-        name: String
-        type: String
-        description: String
-        keywords: [String]
-        url: String
-        repo: String
-        heroimg: String,
-        createDate: String
+      _id
+      name
+      type
+      description
+      url
+      repo
+      heroimg
+      createDate
     }
   }
 `;
+
+export const QUERY_FEATURES = gql`
+  query getFeatures {
+      features {
+      _id
+      name
+      type
+      description
+      url
+      repo
+      heroimg
+      createDate
+      featured
+    }
+  }
+`
