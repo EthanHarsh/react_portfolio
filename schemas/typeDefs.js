@@ -15,6 +15,7 @@ const typeDefs = gql`
 
   type Query {
     features: [Project]
+    projects: [Project]
   }
 `
 

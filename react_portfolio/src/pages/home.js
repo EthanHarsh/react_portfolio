@@ -71,7 +71,7 @@ function HomePage() {
                         <Text style={ introText }>Introduction</Text>
 
                         <Heading style={ whiteText }>Hello, my name is Ethan. I like Mac & Cheese, Techno, and Coding</Heading>
-                        <Text style={ bottomText }>I’m a full stack developer from Columbus, Ohio. I have certifications in JavaScript, Python, React, Poopybutt, Some Other Thing, and Boobybutt. </Text>
+                        <Text style={ bottomText }>I’m a full stack developer from Columbus, Ohio. I have a MERN full stack development certification from the Ohio State University. </Text>
                         <BtnObj.ButtonSecondary text='View Projects'></BtnObj.ButtonSecondary>
                     </Box>
                     <Box width={1/3} style={avatarStyle}>
