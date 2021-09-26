@@ -41,7 +41,7 @@ function NavBar (props) {
     return(
         <Flex style={style}>
             <Box width={1/3} style={boxBaseStyle}>
-                <Text fontWeight='bold' style={logoText}>Ethan Harsh</Text>
+                <a style={undecorate} href="/"><Text fontWeight='bold' style={logoText}>Ethan Harsh</Text></a>
             </Box>
             <Box width={1/3} style={centerBox}>
                 <Flex>

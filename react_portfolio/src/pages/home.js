@@ -50,6 +50,11 @@ const featureStyle = {
     flexFlow: 'column wrap'
 }
 
+const undecorate = {
+    color: "black", 
+    textDecoration: "none"
+}
+
 function HomePage() {
     const { loading, error, data } = useQuery(QUERY_FEATURES)
     if (loading) {
@@ -71,7 +76,7 @@ function HomePage() {
 
                         <Heading style={ whiteText }>Hello, my name is Ethan. I like Mac & Cheese, Techno, and Coding</Heading>
                         <Text style={ bottomText }>I’m a full stack developer from Columbus, Ohio. I have a MERN full stack development certification from the Ohio State University. </Text>
-                        <BtnObj.ButtonSecondary text='View Projects'></BtnObj.ButtonSecondary>
+                        <a style={undecorate} href="/portfolio"><BtnObj.ButtonSecondary text='View Projects'></BtnObj.ButtonSecondary></a>
                     </Box>
                     <Box width={1/3} style={avatarStyle}>
                         <Image src='avatar.jpeg' sx={{width: ['140px', '140px'], borderRadius: '10px'}}></Image>
@@ -84,7 +89,7 @@ function HomePage() {
                         <Text style={ introText }>Education</Text>
                         <Heading style={ whiteText }>The Ohio State University</Heading>
                         <Text style={ bottomText }>After playing college football for two years at John Carroll University, I transferred to The Ohio State University in 2014.  In 2017 I graduated with a bachelors degree in Political Science.  Now I am getting certified to be a Full Stack MERN developer at Ohio State.</Text>
-                        <BtnObj.ButtonSecondary text='View Projects'></BtnObj.ButtonSecondary>
+                        <a style={undecorate} href="/pdf/Ethan_Harsh_Resume.pdf" target="_blank"><BtnObj.ButtonSecondary text='View Resume'></BtnObj.ButtonSecondary></a>
                     </Box>
                     <Box width={1/3} style={avatarStyle}>
                         <Image src='osu-seal-min.jpeg' sx={{width: ['140px', '140px'], borderRadius: '10px'}}></Image>

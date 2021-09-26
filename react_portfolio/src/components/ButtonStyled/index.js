@@ -8,7 +8,8 @@ const baseStyle = {
     paddingBottom: '10px',
     paddingRight: '25px',
     paddingLeft: '25px',
-    marginRight: '1rem'
+    marginRight: '1rem',
+    cursor: 'pointer'
 }
 
 const primaryStyle = {

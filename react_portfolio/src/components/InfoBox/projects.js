@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Flex, Heading, Image, Text } from "rebass";
-import InfoBox from './index'
-import BtnObj from './../ButtonStyled/index'
-import { primaryBorder } from "../utils/colors/lightTheme";
+import InfoBox from './index';
+import BtnObj from './../ButtonStyled/index';
 
 const imgHolder = {
     width: '250px',
@@ -24,6 +23,11 @@ const infoStyle = {
     height: '100%'
 }
 
+const undecorate = {
+    color: "black", 
+    textDecoration: "none"
+}
+
 function ProjectDisplay (project) {
     console.log('projectdisplay')
     project = project.project
@@ -43,8 +47,8 @@ function ProjectDisplay (project) {
                         <Box width={2/3} style={infoStyle}>
                             <Heading style={title}>{project.name}</Heading>
                             <Text style={desc}>{project.description}</Text>
-                            <BtnObj.ButtonPrimary text="View Project" className="projectBtnStyle"></BtnObj.ButtonPrimary>
-                            <BtnObj.ButtonSecondary text="View GitHub"></BtnObj.ButtonSecondary>
+                            <a style={undecorate} href={project.url} target="_blank"><BtnObj.ButtonPrimary text="View Project"></BtnObj.ButtonPrimary></a>
+                            <a style={undecorate} href={project.repo} target="_blank"><BtnObj.ButtonSecondary text="View GitHub"></BtnObj.ButtonSecondary></a>
                         </Box>
                     </Flex>
             </InfoBox.FeatureBox>
