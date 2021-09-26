@@ -32,6 +32,11 @@ const logoGroup = {
     justifyContent: 'flex-end'
 }
 
+const undecorate = {
+    color: "black", 
+    textDecoration: "none"
+}
+
 function NavBar (props) {
     return(
         <Flex style={style}>
@@ -43,7 +48,7 @@ function NavBar (props) {
                     <Box width={1/4}><Text fontWeight='bold'>About</Text></Box>
                     <Box width={1/4}><Text fontWeight='bold'>Portfolio</Text></Box>
                     <Box width={1/4}><Text fontWeight='bold'>Contact</Text></Box>
-                    <Box width={1/4}><Text fontWeight='bold'><a class="nav-link" href="/pdf/Ethan_Harsh_Resume.pdf" target="_blank">Resume</a></Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/pdf/Ethan_Harsh_Resume.pdf" target="_blank">Resume</a></Text></Box>
                 </Flex>
             </Box>
             <Box width={1/3} style={boxBaseStyle}>
