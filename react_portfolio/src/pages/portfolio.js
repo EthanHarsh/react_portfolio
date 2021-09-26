@@ -7,7 +7,7 @@ import ProjectDisplay from "../components/InfoBox/projects";
 import { Box, Heading, Text, Image, Flex } from "rebass";
 import { background, primaryText } from "../components/utils/colors/lightTheme";
 import BtnObj from './../components/ButtonStyled/index'
-import { QUERY_FEATURES } from './../utils/queries';
+import { QUERY_PROJECTS } from './../utils/queries';
 import Footer from "../components/Footer/index";
 
 
@@ -50,7 +50,7 @@ const featureStyle = {
 }
 
 function Portfolio () {
-    const { loading, error, data } = useQuery(QUERY_FEATURES)
+    const { loading, error, data } = useQuery(QUERY_PROJECTS)
     if (loading) {
         console.log(loading)
         console.log(data)
@@ -61,11 +61,15 @@ function Portfolio () {
         return <p>Error!</p>;
     } 
     //console.log(data.features);
-    let features = data.features;
-    //console.log(features[0])
+    let projects = data.projects;
+    console.log(projects)
     return (
         <div style={pageStyle}>
-
+            <InfoBox.GreyBox>
+                {projects.map((project) => 
+                    <ProjectDisplay project={project}></ProjectDisplay>
+                )}
+            </InfoBox.GreyBox>
             <Footer />
         </div>
     )

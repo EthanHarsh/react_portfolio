@@ -2,12 +2,14 @@ import React from "react";
 import { Box, Flex, Heading, Image, Text } from "rebass";
 import InfoBox from './index'
 import BtnObj from './../ButtonStyled/index'
+import { primaryBorder } from "../utils/colors/lightTheme";
 
 const imgHolder = {
     width: '250px',
     height: '250px',
     overflow: 'hidden',
-    borderRadius: '6px'
+    borderRadius: '6px',
+    border: '1px solid #e5e5e5'
 }
 
 const title = {
@@ -21,8 +23,6 @@ const desc = {
 const infoStyle = {
     height: '100%'
 }
-
-
 
 function ProjectDisplay (project) {
     console.log('projectdisplay')
