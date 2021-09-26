@@ -47,7 +47,7 @@ function NavBar (props) {
                 <Flex>
                     <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/about">About</a></Text></Box>
                     <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/portfolio">Portfolio</a></Text></Box>
-                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/contact">Contact</a></Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="mailto:ethan@ethanharsh.com">Contact</a></Text></Box>
                     <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/pdf/Ethan_Harsh_Resume.pdf" target="_blank">Resume</a></Text></Box>
                 </Flex>
             </Box>

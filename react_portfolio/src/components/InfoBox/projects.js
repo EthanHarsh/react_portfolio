@@ -29,9 +29,9 @@ const undecorate = {
 }
 
 function ProjectDisplay (project) {
-    console.log('projectdisplay')
+    //console.log('projectdisplay')
     project = project.project
-    console.log(project.name)
+    //console.log(project.name)
     return (
         <div>
             <InfoBox.FeatureBox>
