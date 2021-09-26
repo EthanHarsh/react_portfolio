@@ -9,6 +9,7 @@ import { background, primaryText } from "../components/utils/colors/lightTheme";
 import BtnObj from './../components/ButtonStyled/index'
 import { QUERY_PROJECTS } from './../utils/queries';
 import Footer from "../components/Footer/index";
+import Loader from "../components/Loader/index";
 
 
 const pageStyle = {
@@ -52,9 +53,7 @@ const featureStyle = {
 function Portfolio () {
     const { loading, error, data } = useQuery(QUERY_PROJECTS)
     if (loading) {
-        console.log(loading)
-        console.log(data)
-        return <p>Loading...{loading}</p>;
+        return <Loader />;
     }
     if (error) {
         console.log(error)

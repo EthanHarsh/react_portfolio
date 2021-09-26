@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from "./components/NavBar/index";
 import HomePage from "./pages/home"
 import PortfolioPage from './pages/portfolio'
+import ResumePage from './pages/resume'
 
 
 const mainStyle = {
@@ -17,7 +18,7 @@ function App() {
   return (
     <main style={mainStyle}>
       <NavBar />
-      <PortfolioPage />
+      <ResumePage />
     </main>
   );
 }
