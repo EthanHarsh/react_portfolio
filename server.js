@@ -24,8 +24,8 @@ app.listen(port, () => {
 startApolloServer(schemas.typeDefs, schemas.resolvers)
 
 async function startApolloServer(typeDefs, resolvers) {
-  console.log(typeDefs)
-  console.log(resolvers)
+  //console.log(typeDefs)
+  //console.log(resolvers)
   const httpServer = http.createServer(app);
   const server = new ApolloServer({
     typeDefs,
