@@ -7,7 +7,7 @@
 
 ## Application Screenshot
 
-![Screenshot](public/screenshot.png)
+![Screenshot](react_portfolio/public/img/screenshot.png)
 
 ## Description
 
