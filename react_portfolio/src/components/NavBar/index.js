@@ -45,17 +45,17 @@ function NavBar (props) {
             </Box>
             <Box width={1/3} style={centerBox}>
                 <Flex>
-                    <Box width={1/4}><Text fontWeight='bold'>About</Text></Box>
-                    <Box width={1/4}><Text fontWeight='bold'>Portfolio</Text></Box>
-                    <Box width={1/4}><Text fontWeight='bold'>Contact</Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/about">About</a></Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/portfolio">Portfolio</a></Text></Box>
+                    <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/contact">Contact</a></Text></Box>
                     <Box width={1/4}><Text fontWeight='bold'><a style={undecorate} href="/pdf/Ethan_Harsh_Resume.pdf" target="_blank">Resume</a></Text></Box>
                 </Flex>
             </Box>
             <Box width={1/3} style={boxBaseStyle}>
                     <Flex style={logoGroup}>
-                        <Box width={1/6}><Image src={github}></Image></Box>
-                        <Box width={1/6}><Image src={linkedin}></Image></Box>
-                        <Box width={1/6}><Image src={instagram}></Image></Box>
+                        <Box width={1/6}><a style={undecorate} href="https://github.com/EthanHarsh" target="_blank"><Image src={github}></Image></a></Box>
+                        <Box width={1/6}><a style={undecorate} href="https://www.linkedin.com/in/ethanharsh/" target="_blank"><Image src={linkedin}></Image></a></Box>
+                        <Box width={1/6}><a style={undecorate} href="https://www.instagram.com/eharsh4/" target="_blank"><Image src={instagram}></Image></a></Box>
                     </Flex>
             </Box>
         </Flex>

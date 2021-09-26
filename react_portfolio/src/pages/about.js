@@ -13,6 +13,8 @@ const pageStyle = {
     marginTop: pageMarginTop,
     marginBottom: pageMarginBottom,
     height: '100%',
+    paddingLeft: '5rem',
+    paddingRight: '5rem'
 }
 
 
